@@ -42,13 +42,17 @@ const checkwinner = () => {
     }
 };
 
-function resetTasks() {
-    if (confirm("Are you sure you want to reset all tasks?")) {
-        tasks = [];
-        taskInput.value = "";
-        renderTasks();
-    }
+function resetGame() {
+    boxes.forEach(box => {
+        box.innerText = "";
+        box.style.pointerEvents = "auto";
+    });
+
+    turnO = true;
+    gameActive = true;
 }
+
+
 
 
 
