@@ -30,14 +30,15 @@ const checkwinner = () => {
         let pos2val = boxes[pos2].innerText;
         let pos3val = boxes[pos3].innerText;
         if (pos1val !== "" && pos2val !== "" && pos3val !== "" && pos1val === pos2val && pos2val === pos3val) {
-            console.log(pos1val + " WINNER");
+            alert(pos1val + " WINNER");
             gameActive = false;
             return; 
         }
     }
     
     if ([...boxes].every(box => box.innerText !== "")) {
-        console.log("DRAW");
+        alert("DRAW");
         gameActive = false;
     }
 };
+
